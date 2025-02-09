@@ -1,18 +1,23 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @layer base {
-    html, body {
-      overflow-x: hidden;
-      height: 100%;
-      margin:0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+  html, body {
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
-  
+
   #footer {
     margin-top: auto;
   }
-  
-  
+
+  /* @theme {
+    fontFamily: {
+      poppins: ['Poppins', 'sans-serif'];
+    }
+  } */
+}

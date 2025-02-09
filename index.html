@@ -6,20 +6,24 @@
     <title>Home Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <!-- <script src="https://cdn.tailwindcss.com" defer></script> -->
   </head>
-  <body class="font-sans">
+  <body class="font-poppins">
 
     <header class="bg-[#00A6B7]">
-    
       <div class="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between">
-       
+        
+        
         <div class="flex items-center space-x-3">
           <img src="src/img/logomangcoding.png" alt="Mangcoding Logo" class="w-8" />
           <span class="text-lg font-bold text-white">mangcoding</span>
         </div>
-    
         
+        <!-- Navigasi Desktop -->
         <nav id="menu" class="hidden lg:flex items-center space-x-4">
           <a href="#home" class="text-white font-semibold px-3 py-2 hover:bg-[#008291] rounded transition-colors duration-300">Home</a>
           <a href="#about" class="text-white font-semibold px-3 py-2 hover:bg-[#008291] rounded transition-colors duration-300">About</a>
@@ -29,23 +33,32 @@
           <a href="#resource" class="text-white font-semibold px-3 py-2 hover:bg-[#008291] rounded transition-colors duration-300">Resource</a>
           <a href="#footer" class="text-white font-semibold px-3 py-2 hover:bg-[#008291] rounded transition-colors duration-300">Contact</a>
         </nav>
-    
-       
-        <div class="hidden lg:block">
-          <button class="px-6 py-2 bg-[#0c3e68] rounded-full text-white hover:bg-[#0a3153] transition-colors duration-300">
-            Build Website
-          </button>
-        </div>
-    
         
-        <div class="lg:hidden">
-          <button id="menu-btn" class="focus:outline-none">
-            <img src="src/img/humburger.png" alt="menu" class="w-8">
+        <!-- Kontainer untuk tombol dan hamburger (Desktop & Mobile) -->
+        <div class="flex items-center space-x-2">
+          <!-- Tombol Build Website (hanya untuk desktop) -->
+          <div class="hidden lg:block">
+            <button class="px-6 py-2 bg-[#0c3e68] rounded-full text-white hover:bg-[#0a3153] transition-colors duration-300">
+              Build Website
+            </button>
+          </div>
+          
+          <!-- Ikon Search -->
+          <button class="p-2 rounded-full bg-transparent hover:bg-[#008291] transition-colors duration-300">
+            <img src="src/img/search.png" alt="Search" class="w-6 ml:w-[32px]">
           </button>
+          
+          <!-- Tombol Hamburger (hanya untuk mobile) -->
+          <div class="lg:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+              <img src="src/img/humburger.png" alt="menu" class="w-8">
+            </button>
+          </div>
         </div>
+        
       </div>
     
-
+      <!-- Menu Mobile -->
       <div id="mobile-menu" class="lg:hidden hidden">
         <nav class="flex flex-col bg-[#00A6B7] px-4 py-4 space-y-2">
           <a href="#home" class="text-white font-semibold px-3 py-2 hover:bg-[#008291] rounded transition-colors duration-300">Home</a>
@@ -62,6 +75,7 @@
       </div>
     </header>
     
+          
     <script>
       const menuBtn = document.getElementById('menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
@@ -73,27 +87,30 @@
     
     
     
-    <main id="home" class="bg-[#00A6B7] sm:mx-auto text-center sm:text-left px-6 py-20 w-full">
-      <img src="src/img/bola.png" alt="bola" class="pl-14 w-[135px]">
-      <p class="text-lg md:pl-16 text-white">Build your website</p>
-      <h1 class="text-4xl md:text-[60px] font-bold leading-tight mt-2 text-center text-white">
-        <img src="src/img/Vector 390.png" alt="" class="w-[337px] mx-auto" />
-        Develop your idea with <span class="text-black">Mangcoding</span><br />
-        Team Through Digital Products
+    <main id="home" class="sm:mx-auto text-center px-6 py-20 w-full bg-[#00A6B7]">
+      <img src="src/img/bola.png" alt="bola" class="pl-14 w-[135px] sm:ml-16">
+      <p class="text-lg sm:pl-28 text-white text-start">Build your website</p>
+      <img src="src/img/Vector 390.png" alt="" class="w-[337px] mx-auto" />
+      <h1 class="text-4xl leading-tight mt-2 text-white sm:text-start sm:pl-24 font-bold lg:text-[64px] left-[120px]">
+        Develop your idea with <span class="text-black">Mangcoding Team</span       >
+        Through Digital Products
       </h1>
-      <p class="mt-4 text-gray-200 text-center">
+      <p class="mt-4 text-gray-200 text-center sm:text-start sm:pl-24">
         Provide Website creation for your company (Shopify, WordPress, and
         Other)
       </p>
-      <div class="mt-6 flex justify-center flex-wrap gap-4">
-        <button class="bg-blue-800 px-6 py-2 rounded-full text-white">
+      <div class="mt-6 flex justify-center sm:justify-start flex-wrap gap-4 sm:text-start sm:pl-20">
+        <button class="bg-[#0C3E63] px-6 py-2 rounded-full text-white">
           Build Website
         </button>
         <button class="border border-white px-6 py-2 rounded-full text-white">
           Explore Blog
         </button>
-        <img src="src/img/pesawat.png" alt="logo pesawat" class="w-[99px] pl-12">
-        <img src="src/img/bola2.png" alt="logo pesawat" class="w-[125px] pl-16">
+        <div class="mx-auto flex justify-start gap-x-36 w-fit">
+          <img src="src/img/logopesawat.png" alt="logo pesawat" class="w-[56px]">
+          <img src="src/img/bola2.png" alt="logo bola" class="w-[56px] -mt-6">
+        </div>
+        
       </div>
       <img src="src/img/pesawat.png" alt="logo pesawat" class="hidden md:block w-[135px] pl-16 mt-16">
     </main>
